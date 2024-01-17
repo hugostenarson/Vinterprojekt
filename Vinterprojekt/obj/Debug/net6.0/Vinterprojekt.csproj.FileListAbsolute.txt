@@ -20,3 +20,4 @@ C:\Users\hugo.stenarson\Desktop\Programmering\Vinterprojekt\Vinterprojekt\obj\De
 C:\Users\hugo.stenarson\Desktop\Programmering\Vinterprojekt\Vinterprojekt\obj\Debug\net6.0\Vinterprojekt.pdb
 C:\Users\hugo.stenarson\Desktop\Programmering\Vinterprojekt\Vinterprojekt\obj\Debug\net6.0\Vinterprojekt.genruntimeconfig.cache
 C:\Users\hugo.stenarson\Desktop\Programmering\Vinterprojekt\Vinterprojekt\obj\Debug\net6.0\ref\Vinterprojekt.dll
+c:\Users\hugo.stenarson\Desktop\Programmering\Vinterprojekt\Vinterprojekt\bin\Debug\net6.0\person.png

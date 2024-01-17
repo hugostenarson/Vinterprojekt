@@ -45,7 +45,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       }
-    } 
+    }
   },
   "libraries": {
     "Raylib-cs/4.5.0.4": {
