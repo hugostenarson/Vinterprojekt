@@ -50,11 +50,16 @@ walls.Add(new Rectangle(716, 32, 32, 568));
 
 
 //Rum 2
-Rectangle enemyRect = new Rectangle(400, 200, 125, 20);
-Rectangle enemy2Rect = new Rectangle(400,200, 125, 20);
+Rectangle enemyRect = new Rectangle(310, 200, 125, 20);
+Rectangle enemy2Rect = new Rectangle(400,400, 125, 20);
 
-Rectangle barrierLRect = new Rectangle(0, 200, 1, 10);
-Rectangle barrierRRect = new Rectangle(799,200,1,10);
+Rectangle barrierLRect = new Rectangle(-1, 200, 1, 400);
+Rectangle barrierRRect = new Rectangle(800,200,1,400);
+
+
+
+
+
 string tja = "true";
 string tja2 = "true";
 
@@ -155,17 +160,19 @@ if(Raylib.CheckCollisionRecs(enemyRect,barrierRRect))
 
 }
 
+if(Raylib.CheckCollisionRecs(enemy2Rect, barrierLRect))
+{
+    tja2 = "false";
+    enemy2Move.X = 0;
+}
+
 if(Raylib.CheckCollisionRecs(enemy2Rect, barrierRRect))
 {
     tja2 = "hej";
     enemy2Move.X = 0;
 }
 
-if(Raylib.CheckCollisionRecs(enemy2Rect, barrierLRect))
-{
-    tja2 = "false";
-    enemy2Move.X = 0;
-}
+
 
     if (tja == "false" )
     {
@@ -179,12 +186,12 @@ if(Raylib.CheckCollisionRecs(enemy2Rect, barrierLRect))
 
     if (tja2 == "false")
     {
-        enemy2Move.X = -8;
+        enemy2Move.X = 8;
     }
 
     if (tja2 == "hej")
     {
-        enemy2Move.X = 8;
+        enemy2Move.X = -8;
     }
 
 
@@ -212,9 +219,10 @@ if (scene == "room2")
     Raylib.DrawTexture(person, (int)personRect.x, (int)personRect.y, Color.WHITE);
     Raylib.DrawRectangleRec(enemyRect, Color.BLACK);
     Raylib.DrawRectangleRec(enemy2Rect, Color.BLACK);
-    Raylib.DrawRectangleRec(barrierLRect, Color.RED);
-    Raylib.DrawRectangleRec(barrierRRect, Color.RED);
+    Raylib.DrawRectangleRec(barrierLRect, Color.WHITE);
+    Raylib.DrawRectangleRec(barrierRRect, Color.WHITE);
     tja = "true";
+    tja2 = "true";
 }
 
 Raylib.EndDrawing();
